@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Mishbot</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
         <script src="js/load.js"></script>
         <script src="js/generateResponse.js"></script>
@@ -11,12 +13,18 @@
     </head>
     <body>
         <div data-bind="chatModel">
-            <div data-bind="foreach: messages">
-                <p data-bind="text: sender + ': ' + content"/>
+            <div>
+                <table style="border-width: 0px">
+                    <tbody data-bind="foreach: messages">
+                        <tr data-bind="text: sender + ': ' + content"/>
+                    </tbody>
+                </table>
             </div>
             <p style="position: absolute; left: 7px; bottom: 20vh; display: none" id="typing">mishcat is typing...</p>
-            <input type="text" data-bind="textInput: input; submit: sendMessage()" style="height: 20vh; width: 80vw; position: absolute; bottom: 10px; left: 5px" id="imBox"/>
-            <button id="submit" data-bind="click: sendMessage()", style="width: 18vw; height: 20vh; position: fixed; right: 5px; bottom: 10px">Send</button>
+            <form data-bind="submit: sendMessage">
+            <input type="text" data-bind="textInput: input" style="width: 80vw; position: absolute; bottom: 10px; left: 5px" id="imBox"/>
+            <button id="submit" type="submit"  style="width: 18vw; position: fixed; right: 5px; bottom: 10px">Send</button>
+            </form>
         </div>
     </body>
 
@@ -36,6 +44,10 @@ Promise.all(load_arr).then(value => {
         var self = this;
         self.input = ko.observable();
         self.messages = ko.observableArray([]);
+        self.messages.push({
+            sender: "system-message",
+            content: "you're chillin w/mishbot, say it's lit fam"
+        });
 
         self.addMessage= function (senderName, msgContent) {
             if (msgContent){
