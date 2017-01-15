@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Mishbot</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+        <script src="js/load.js"></script>
+        <script src="js/generateResponse.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js" type='text/javascript' > </script>
+
+    </head>
+    <body>
+        <div data-bind="chatModel">
+            <div data-bind="foreach: messages">
+                <p data-bind="text: sender + ': ' + content"/>
+            </div>
+            <p style="position: absolute; left: 7px; bottom: 20vh; display: none" id="typing">mishcat is typing...</p>
+            <input type="text" data-bind="textInput: input; submit: sendMessage()" style="height: 20vh; width: 80vw; position: absolute; bottom: 10px; left: 5px" id="imBox"/>
+            <button id="submit" data-bind="click: sendMessage()", style="width: 18vw; height: 20vh; position: fixed; right: 5px; bottom: 10px">Send</button>
+        </div>
+    </body>
+
+    <script>
+Promise.all(load_arr).then(value => {
+    var builtWithArr = Object.keys(value[0]);
+    var codeSnippets = value[1];
+
+    DICTIONARY = {};
+    TRUMP_DICT = {};
+    for(var i = 1; i < value.length-1; i+=1){
+        DICTIONARY[PROB_KEYS_AUGMENTED[i]] = value[i];
+        DICTIONARY[PROB_KEYS_AUGMENTED[i]].pop();
+    }
+    PROBABILITIES = value[value.length-1];
+    function chatModel(){
+        var self = this;
+        self.input = ko.observable();
+        self.messages = ko.observableArray([]);
+
+        self.addMessage= function (senderName, msgContent) {
+            if (msgContent){
+                self.messages.push({
+                    sender: senderName,
+                    content: msgContent
+                });
+            }
+        };
+
+        self.sendResponse = function(){
+            //$("#typing").css({display: none});
+            self.addMessage("mishbot", generateSentence());
+        }
+
+        self.sendMessage= function(){
+            self.addMessage("me", self.input());
+            self.input("");
+            self.sendResponse();
+            //$("#typing").css({display: block});
+            //window.setTimeout(sendResponse, 200);
+        };
+
+    }
+
+    ko.applyBindings(new chatModel());
+})
+    </script>
+
+</html>
