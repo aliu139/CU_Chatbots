@@ -21,7 +21,6 @@ seen
 shipped
 heard
 called
-sayin
 evaluated
 refined
 told
@@ -35,12 +34,12 @@ dumped
 appreciated
 come
 waitin
-banged
 signed
 hyped
 covered
 gucc
 brethren
+sayin
 shit
 unfinished
 cleaned

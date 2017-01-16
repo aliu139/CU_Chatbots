@@ -1,5 +1,3 @@
-seen
-saved
 sufficient
 scared
 checked
@@ -25,6 +23,7 @@ stressed
 taken
 offered
 sucked
+seen
 oriented
 supposed
 😅
@@ -68,3 +67,4 @@ repeated
 offended
 thought
 brought
+saved

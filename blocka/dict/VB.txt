@@ -25,8 +25,6 @@ save
 try
 forgive
 deal
-say
-post
 fuck
 have
 self

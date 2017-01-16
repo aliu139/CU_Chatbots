@@ -1,6 +1,4 @@
 up
-thru
-away
 out
 over
 off
@@ -8,3 +6,4 @@ w/o
 down
 doughs
 bc
+thru

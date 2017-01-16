@@ -1,19 +1,3 @@
-make
-match
-bring
-suggest
-do
-haha
-pick
-feel
-know
-see
-sing
-start
-let
-take
-steal
-thooo
 be
 study
 cs
@@ -24,9 +8,11 @@ hope
 fail
 regret
 try
+know
 sign
 email
 knock
+take
 yeaa
 show
 go
@@ -35,6 +21,8 @@ lol
 wait
 eat
 meet
+see
+start
 im
 finish
 submit
@@ -43,6 +31,7 @@ hit
 follow
 look
 remember
+do
 i
 send
 use
@@ -54,6 +43,7 @@ idk
 keep
 future
 reset
+let
 get
 lem
 check
@@ -84,6 +74,7 @@ hare
 create
 figure
 think
+make
 learn
 😅
 folder
@@ -112,6 +103,7 @@ implement
 okenshields
 mini
 stop
+pick
 fulfill
 drink
 soda
@@ -131,6 +123,7 @@ understand
 gon
 deny
 dismiss
+feel
 care
 separate
 die
@@ -167,6 +160,7 @@ worry
 😢
 ttyll
 combust
+bring
 ill
 consider
 kill
@@ -187,6 +181,7 @@ download
 find
 annotate
 risk
+haha
 laugh
 shit
 open
@@ -195,3 +190,8 @@ mess
 sleep
 fake
 trap
+match
+suggest
+sing
+steal
+thooo
