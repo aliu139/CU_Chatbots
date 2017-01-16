@@ -11,7 +11,6 @@ body{
 
 #hand{
     height: 100vh;
-    position: absolute;
 }
 
 #header{
@@ -38,4 +37,28 @@ body{
 
 #list{
     margin-bottom: 30px;
+}
+
+#mobile{
+    display: none;
+}
+
+@media (max-width: 760px){
+    #header{
+        display: none;
+    }
+
+    #actual{
+        display: none;
+    }
+
+    #mobile{
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    #hand{
+        height: 70vh;
+    }
 }
