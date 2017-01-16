@@ -1,8 +1,0 @@
-lines
-papers
-thanks
-books
-solutions
-tabs
-caps
-lets
