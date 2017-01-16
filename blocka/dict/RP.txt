@@ -1,0 +1,4 @@
+out
+down
+back
+up
