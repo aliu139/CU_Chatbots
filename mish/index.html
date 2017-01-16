@@ -4,6 +4,7 @@
         <title>Mishbot</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
         <script src="js/load.js"></script>
         <script src="js/generateResponse.js"></script>
@@ -12,18 +13,17 @@
 
     </head>
     <body>
-        <div data-bind="chatModel">
-            <div>
+        <div data-bind="chatModel" style="margin: 5px">
+            <div style="padding-bottom: 1.5cm">
                 <table style="border-width: 0px">
                     <tbody data-bind="foreach: messages">
                         <tr data-bind="text: sender + ': ' + content"/>
                     </tbody>
                 </table>
             </div>
-            <p style="position: absolute; left: 7px; bottom: 20vh; display: none" id="typing">mishcat is typing...</p>
             <form data-bind="submit: sendMessage">
-            <input type="text" data-bind="textInput: input" style="width: 80vw; position: absolute; bottom: 10px; left: 5px" id="imBox"/>
-            <button id="submit" type="submit"  style="width: 18vw; position: fixed; right: 5px; bottom: 10px">Send</button>
+            <input type="text" data-bind="textInput: input" style="width: 80vw; height: 1cm; position: fixed; bottom: 10px; left: 5px" id="imBox"/>
+            <button id="submit" type="submit"  style="width: 18vw; height: 1cm; position: fixed; right: 5px; bottom: 10px">Send</button>
             </form>
         </div>
     </body>
