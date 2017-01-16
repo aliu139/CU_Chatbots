@@ -108,7 +108,6 @@ shud
 signed
 saved
 quoted
-https
 released
 watched
 popped
