@@ -60,7 +60,17 @@ Promise.all(load_arr).then(value => {
 
         self.sendResponse = function(){
             //$("#typing").css({display: none});
-            self.addMessage("toph the robot", generateSentence());
+            if (Math.random() < 0.7){
+                self.addMessage("toph the robot", getNoun());
+            }
+            if (Math.random() < 0.5){
+                window.setTimeout(function () {self.addMessage("toph the robot", getNoun());}, 100);
+            }
+            if (Math.random() < 0.2){
+                window.setTimeout(function () {self.addMessage("toph the robot", getNoun());}, 200);
+            }
+            window.setTimeout(function() { self.addMessage("toph the robot", generateSentence());}, 500);
+            
         }
 
         self.sendMessage= function(){

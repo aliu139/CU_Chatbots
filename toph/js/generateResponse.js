@@ -1,10 +1,6 @@
 // Increases in probability of a sentence/the readme
 // ending with each additional word
-var DELTA_WORD_SENTENCE = 0.08;
-var DELTA_SENTENCE_README = 0.0002;
-var DELTA_SECTION_README = 0.13;
-var CHANCE_OF_SNIPPET = 0.6;
-var TRUMP_MODE = false;
+var DELTA_WORD_SENTENCE = 0.00002;
 
 function normalize(arr) {
     var runSum = 0;
@@ -61,6 +57,13 @@ function getWord(partOfSpeech) {
     return dict[randIdx];
 }
 
+function getNoun() {
+    if (Math.random() < 0.3){
+        return getWord("NN");
+    }
+    return getWord("NNS");
+}
+
 
 function generateSentence() {
     // Counts up how many words are in a
@@ -88,7 +91,7 @@ function generateSentence() {
         currSentence = currSentence + ', ';
         isNewSentence = false;
     } else if (sentenceWordCounter > 0){
-        currSentence = currSentence + '. ';
+        currSentence = currSentence + ' ';
         isNewSentence = true;
     } else {
         currSentence = currSentence + ' ';

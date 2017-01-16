@@ -1,6 +1,6 @@
 // Increases in probability of a sentence/the readme
 // ending with each additional word
-var DELTA_WORD_SENTENCE = 0.08;
+var DELTA_WORD_SENTENCE = 0.0001;
 var DELTA_SENTENCE_README = 0.0002;
 var DELTA_SECTION_README = 0.13;
 var CHANCE_OF_SNIPPET = 0.6;
