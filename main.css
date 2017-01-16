@@ -1,0 +1,41 @@
+body{
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+#logo{
+    width: 120px;
+    position: absolute;
+    top:120px;
+    right: 72px;
+}
+
+#hand{
+    height: 100vh;
+    position: absolute;
+}
+
+#header{
+    display: block;
+    float: left;
+    width: 60%;
+    height: 100vh;
+    padding: 20px;
+
+    text-align: center;
+}
+
+#actual{
+    display: block;
+    width: 40%;
+    float: left;
+    height: 100vh;
+}
+
+#title{
+    font-size: 80px;
+    text-decoration: bold;
+}
+
+#list{
+    margin-bottom: 30px;
+}
